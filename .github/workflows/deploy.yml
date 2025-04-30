@@ -28,4 +28,4 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete ./ alwaysdata:~/
+          rsync -avz --delete ./ alwaysdata:~/backend
