@@ -12,7 +12,7 @@ const options = {
     },
     servers: [
       {
-        url: `${process.env.URL}:${process.env.PORT || 3000}`,
+        url: `${process.env.URL}`,
       },
     ],
   },
