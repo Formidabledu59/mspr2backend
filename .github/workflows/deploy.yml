@@ -1,0 +1,25 @@
+name: Deploy to Alwaysdata
+
+on:
+  push:
+    branches:
+      - main  # ou master si ton repo utilise ce nom
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.A2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ssh-mspr2backend.alwaysdata.net >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete ./ mspr2backend@ssh-mspr2backend.alwaysdata.net:~/www/
