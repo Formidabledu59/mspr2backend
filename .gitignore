@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environnement
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+coverage/
+
+# Build output
+dist/
+build/
+
+# Swagger cache
+swagger.json
