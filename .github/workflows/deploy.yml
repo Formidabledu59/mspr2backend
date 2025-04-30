@@ -27,4 +27,4 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete ./ mspr2backend@ssh-mspr2backend.alwaysdata.net:~/www/
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes" ./ mspr2backend@ssh-mspr2backend.alwaysdata.net:~/www/
