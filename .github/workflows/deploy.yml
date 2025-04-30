@@ -20,6 +20,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan ssh-mspr2backend.alwaysdata.net >> ~/.ssh/known_hosts
 
+      - name: Add SSH key to ssh-agent
+        run: |
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
+
       - name: Deploy via rsync
         run: |
           rsync -avz --delete ./ mspr2backend@ssh-mspr2backend.alwaysdata.net:~/www/
