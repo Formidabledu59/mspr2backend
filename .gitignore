@@ -1,9 +1,6 @@
 # Node modules
 node_modules/
 
-# Environnement
-.env
-
 # Logs
 logs/
 *.log
