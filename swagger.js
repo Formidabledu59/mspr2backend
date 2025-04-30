@@ -12,7 +12,7 @@ const options = {
     },
     servers: [
       {
-        url: `${process.env.URL}`,
+        url: process.env.URL || 'https://mspr2backend.alwaysdata.net',
       },
     ],
   },
