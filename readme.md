@@ -18,7 +18,7 @@ npm install
 ```
 
 3. **Configurer l'environnement**
-Créer un fichier `.env` à la racine :
+Créer un fichier `.env` à la racine (comme le `.env.example` ):
 ```env
 DB_HOST=
 DB_PORT=
