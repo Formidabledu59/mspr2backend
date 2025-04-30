@@ -5,7 +5,7 @@ const pandemieRoutes = require('./routes/pandemie');
 const paysRoutes = require('./routes/pays');
 const statsRoutes = require('./routes/stats');
 const statPandemieRoutes = require('./routes/statpandemie');
-const setupSwagger = require('./swagger'); // ✅ ici
+const setupSwagger = require('./swagger'); 
 
 app.use(cors());
 app.use(express.json());
@@ -15,10 +15,9 @@ app.use('/pays', paysRoutes);
 app.use('/stat_pandemie', statsRoutes);
 app.use('/statpandemie', statPandemieRoutes);
 
-// ✅ ici
 setupSwagger(app);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://${process.env.URL}:${PORT}`);
+  console.log(`Server running on ${process.env.URL}:${PORT}`);
 });
