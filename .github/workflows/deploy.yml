@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete .alwaysdata:~/backend
+          rsync -avz --delete ./ alwaysdata:~/backend
 
       - name: Install dependencies on server
         run: |
