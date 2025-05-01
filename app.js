@@ -7,6 +7,9 @@ const statsRoutes = require('./routes/stats');
 const statPandemieRoutes = require('./routes/statpandemie');
 const setupSwagger = require('./swagger'); 
 
+const isProduction = process.env.NODE_ENV === 'Prod';
+const baseUrl = isProduction ? process.env.URL_PROD : process.env.URL_DEV; // URL selon l'environnement
+
 app.use(cors());
 app.use(express.json());
 
@@ -19,5 +22,5 @@ setupSwagger(app);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on ${process.env.URL}:${PORT}`);
+  console.log(`Server running on ${baseUrl}:${PORT}`);
 });

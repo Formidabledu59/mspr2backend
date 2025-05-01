@@ -2,6 +2,9 @@
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 
+const isProduction = process.env.NODE_ENV === 'Prod';
+const baseUrl = isProduction ? process.env.URL_PROD : process.env.URL_DEV; // URL selon l'environnement
+
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -12,7 +15,7 @@ const options = {
     },
     servers: [
       {
-        url: process.env.URL || 'https://mspr2backend.alwaysdata.net',
+        url: baseUrl,
       },
     ],
   },
