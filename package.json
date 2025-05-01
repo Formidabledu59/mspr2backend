@@ -5,7 +5,8 @@
     "express": "^5.1.0",
     "mysql2": "^3.14.1",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "path-to-regexp": "^6.2.1"
   },
   "scripts": {
     "start": "node app.js"
