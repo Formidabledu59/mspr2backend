@@ -164,21 +164,25 @@ Tous les champs sont optionnels, mais plus tu en donnes, plus la recherche est p
 
 ## 🔮 Endpoint Spécial : `/info`
 
-### 🔍 `GET /info/all`
-
-Retourne toutes les statistiques toutes pandémies confondues.
-
-### 🔍 `GET /info/country/:id`
-
-Retourne toutes les stats pour un pays donné.
-
-### 🔍 `GET /info/type/:id`
+### 🔍 `GET /pays-par-pandemie/:id`
 
 Retourne toutes les stats pour une pandémie donnée.
 
-### 🔍 `GET /info/date/:date`
+### 🔍 `GET /pandemies-par-pays/:id`
 
-Retourne toutes les stats enregistrées à une date donnée.
+Retourne toutes les stats pour un pays donné.
+
+### 🔍 `GET /total-par-pays/:id`
+
+Retourne toutes les cas par pays pour une pandémie donné.
+
+### 🔍 `GET /total-pays-pandemie/:id_pays/:id_pandemie`
+
+Retourne toutes les cas pour un pays et une pandémie.
+
+### 🔍 `GET /pays-contamination/:id`
+
+Retourne toutes les Pays triés par taux de contamination (total cas / population) pour une pandémie.
 
 ---
 
