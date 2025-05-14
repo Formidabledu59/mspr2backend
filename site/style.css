@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fond dégradé */
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.membre {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.membre img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3498db;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.membre:hover img {
+  transform: scale(1.1);
+}
+
+.membre a {
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.membre a:hover {
+  color: #1d6fa5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.membre {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.membre img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3498db;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.membre:hover img {
+  transform: scale(1.1);
+}
+
+.membre a {
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.membre a:hover {
+  color: #1d6fa5;
+}
+
+/* Logo de cœur */
+#heart-logo {
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  color: #ff4b5c;
+  transition: transform 0.3s ease-in-out;
+}
+
+#heart-logo:hover {
+  transform: scale(1.2);
+  color: #ff9f69;
+}
+
+/* Effet sur le texte */
+#heart-logo span {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #fff;
+  background-color: #3498db;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#heart-logo:hover span {
+  display: block;
+}
+
+#made-with {
+  margin-top: 50px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+#made-with #heart-logo {
+  color: #ff4b5c;
+  font-size: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#made-with #heart-logo:hover {
+  transform: scale(1.2);
+  color: #ff9f69;
+}
+
+#made-with span {
+  font-weight: bold;
+}
+
+#made-with:hover {
+  color: #3498db;
+}
+

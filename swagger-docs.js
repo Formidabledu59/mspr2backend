@@ -123,4 +123,124 @@
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/StatPandemie'
+ *
+ * /info/pays-par-pandemie/{id_pandemie}:
+ *   get:
+ *     summary: Liste des pays ayant des stats pour une pandémie
+ *     parameters:
+ *       - in: path
+ *         name: id_pandemie
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la pandémie
+ *     responses:
+ *       200:
+ *         description: Liste des pays
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Pays'
+ *
+ * /info/pandemies-par-pays/{id_pays}:
+ *   get:
+ *     summary: Liste des pandémies pour lesquelles un pays a des stats
+ *     parameters:
+ *       - in: path
+ *         name: id_pays
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID du pays
+ *     responses:
+ *       200:
+ *         description: Liste des pandémies
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Pandemie'
+ *
+ * /info/total-par-pays/{id_pandemie}:
+ *   get:
+ *     summary: Total de cas par pays pour une pandémie
+ *     parameters:
+ *       - in: path
+ *         name: id_pandemie
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la pandémie
+ *     responses:
+ *       200:
+ *         description: Liste des pays avec total de cas
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   nom_pays:
+ *                     type: string
+ *                   total_cas:
+ *                     type: integer
+ *
+ * /info/total-pays-pandemie/{id_pays}/{id_pandemie}:
+ *   get:
+ *     summary: Total de cas pour un pays et une pandémie
+ *     parameters:
+ *       - in: path
+ *         name: id_pays
+ *         required: true
+ *         schema:
+ *           type: integer
+ *       - in: path
+ *         name: id_pandemie
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Total de cas pour le pays et la pandémie
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 total_cas:
+ *                   type: integer
+ *
+ * /info/pays-contamination/{id_pandemie}:
+ *   get:
+ *     summary: Pays triés par taux de contamination pour une pandémie
+ *     parameters:
+ *       - in: path
+ *         name: id_pandemie
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la pandémie
+ *     responses:
+ *       200:
+ *         description: Liste des pays triés par taux de contamination
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   nom_pays:
+ *                     type: string
+ *                   population:
+ *                     type: integer
+ *                   total_cas:
+ *                     type: integer
+ *                   taux_contamination:
+ *                     type: number
+ *                     format: float
  */
