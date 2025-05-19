@@ -71,4 +71,8 @@ npm run archi
 
 ## 👤 Auteur
 
+[Ayoub FATHALLAH](https://github.com/Formidabledu59)
+
+---
+
 Script pensé pour documenter automatiquement les projets JavaScript/Node.
